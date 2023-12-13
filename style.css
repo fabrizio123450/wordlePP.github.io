@@ -11,7 +11,7 @@ h1,h2,h3 {
     font-weight: lighter;
     text-align: center;
     color: white;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 /*JUEGO*/
 #guess-input {
@@ -79,10 +79,34 @@ button:active {
     color: white;
     line-height: 40px;
 }
+
+/********************************************/
+/*teclado*/
+.keyboard-container {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.key{
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+}
+
 /****************************************************/
 /* MODAL */
 
-#openModalBtn {
+#openModalBtn, #idioma {
     font-family: 'Helvetica Neue LT Pro', sans-serif;
     display: flex;
     justify-content: center;
@@ -107,6 +131,7 @@ button:active {
     width: 100%;
     height: 100%;
     background-color: #161615f0;
+    z-index: 100;
 }
 
 

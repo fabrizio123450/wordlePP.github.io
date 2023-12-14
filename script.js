@@ -89,7 +89,7 @@ function wordlePPY() {
     if (myInput.length < 5) {
         htmPalabra.innerHTML = "PALABRA CORTA";
         return;
-    } 
+    }
     for (let i in palabraW) {
         const SPAN = document.createElement('span');
         SPAN.className = 'letter';
@@ -128,9 +128,9 @@ function wordlePPY() {
 
 }
 //metodo para recargar la pag de 0
-function reloadF() {
+mybutton.addEventListener('click', () => {
     window.location.href = window.location.href;
-}
+});
 //busca en la api la palabra
 function fetchPalabra(url) {
     fetch(url)
@@ -149,7 +149,7 @@ function fetchPalabra(url) {
  * Cambia el idioma del juego por español o ingles
  * El idioma por defecto del juego es el ingles
  */
-function changeL() {
+boton.addEventListener('click', () => {
     if (boton.textContent.trim() === "ES") {
         boton.textContent = "EN";
         fetchPalabra(urlTwo);
@@ -157,7 +157,7 @@ function changeL() {
         boton.textContent = "ES";
         fetchPalabra(url); // Llama a la función con la URL original
     }
-}
+});
 
 
 // Abrir el modal cuando se hace clic en el botón
@@ -165,17 +165,17 @@ const openModalBtn = document.getElementById('openModalBtn');
 const modal = document.getElementById('myModal');
 const closeModalBtn = document.querySelector('.close');
 
-openModalBtn.addEventListener('click', function () {
+openModalBtn.addEventListener('click', () => {
     modal.style.display = 'block';
 });
 
 // Cerrar el modal cuando se hace clic en la "X"
-closeModalBtn.addEventListener('click', function () {
+closeModalBtn.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
 // Cerrar el modal cuando se hace clic fuera del modal
-window.addEventListener('click', function (event) {
+window.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.style.display = 'none';
     }
